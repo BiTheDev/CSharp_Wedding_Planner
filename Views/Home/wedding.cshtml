@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wedding Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/wedding.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" >
+        <span class="navbar-brand">Wedding Planner</span>
+        <form  class="form-inline">
+            <a href="/logout" class="btn btn-outline-success my-2 my-sm-0">logout</a> 
+        </form>
+    </nav>
+    <div id="container">
+
+    <h1>Welcome to Wedding Planner</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            @foreach(var wedding in @ViewBag.allWeddings){
+            <tr>
+                <td><a href="/weddinginfo/@wedding.id">@wedding.wedder_1 & @wedding.wedder_2</a></td>
+                <td>@wedding.date.ToString("MMMMM dd yyy")</td>
+                <td>@wedding.guests.Count</td>
+                @if( @wedding.usersid == @ViewBag.userid){
+                    <td>
+                        <form action="delete" method="POST">
+                            <input type="hidden" name="weddingid" value = @wedding.id>
+                        <button type="submit">Delete</button>
+                    </form>
+                    </td>;
+                }else{
+                    bool InList = false;
+                        @foreach(var guest in @wedding.guests){
+                                if(@guest.usersid == @ViewBag.userid){
+                                   InList = true;
+                                <td>
+                                    <form action="/unrsvp" method="POST">
+                                        <input type="hidden" name="weddingid" value = @wedding.id>
+                                        <button type="submit">UN-RSVP</button>
+                                    </form>
+                                </td>                 
+                            }
+                        }
+                        @if(InList == false){
+                        <td>
+                        <form action="/rsvp" method="POST">
+                            <input type="hidden" name="weddingid" value = @wedding.id>
+                            <button type="submit">RSVP</button>
+                        </form>
+                        </td>
+                        }
+                }
+                  
+            </tr>
+            }
+        </tbody>
+    </table>
+    <a  href="/newwedding" class="btn btn-success">New Wedding</a>
+    
+</div>
+
+</body>
+</html>

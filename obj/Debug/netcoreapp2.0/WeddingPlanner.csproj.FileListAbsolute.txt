@@ -1,0 +1,11 @@
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.deps.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.dev.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.pdb
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csprojResolveAssemblyReference.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csproj.CoreCompileInputs.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfoInputs.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfo.cs
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.pdb

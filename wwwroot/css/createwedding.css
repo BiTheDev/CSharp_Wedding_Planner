@@ -1,0 +1,23 @@
+#container{
+    width:30%;
+    border:1px groove gray !important;
+    box-shadow: 1px 2px navy;
+    margin: 5% 0 0 35% !important; 
+}
+
+label{
+    margin-top:5% !important;
+    display: block !important;
+}
+
+input{
+    display:inline-block !important;
+    width:70%;
+}
+.btn-danger{
+    display: block !important;
+    margin: 5% 0 5% 70% !important;
+}
+span{
+    display: block !important;
+}

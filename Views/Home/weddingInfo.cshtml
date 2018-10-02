@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/weddinginfo.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Wedding Info</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark" >
+        <span class="navbar-brand">Wedding Planner</span>
+        <form  class="form-inline">
+            <a href="/wedding" class="btn btn-outline-primary my-2 my-sm-0"> DashBoard</a>
+            <a href="/logout" class="btn btn-outline-success my-2 my-sm-0">logout</a> 
+        </form>
+    </nav>
+        <div id="container"> 
+            <h1>@ViewBag.Weddinginfo.wedder_1 and @ViewBag.Weddinginfo.wedder_2 's Wedding</h1>
+            <h3>Date: @ViewBag.Weddinginfo.date.ToString("MMM dd yyyy")</h3>
+            <h3>Location: @ViewBag.Weddinginfo.location</h3>
+            <h3>Guests</h3>
+            <ul>
+            @foreach(var guest in @ViewBag.Weddinginfo.guests)
+            {
+                <li>@guest.user.first_name @guest.user.last_name</li>
+            }
+            </ul>
+        </div>
+<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAbxTibAHA6y1XSB5_RXnb0gVUB3AgeGiM&q=@ViewBag.Weddinginfo.location" allowfullscreen></iframe>
+</script>
+</body>
+</html>
